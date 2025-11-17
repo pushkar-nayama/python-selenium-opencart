@@ -1,0 +1,16 @@
+import logging
+import os
+
+class LogGen:
+
+    @staticmethod
+    def loggen():
+        base_dir = os.path.abspath(os.curdir)
+        log_path = os.path.join(base_dir, "logs")
+        path = os.path.join(log_path, "automation.log")
+
+        logging.basicConfig(filename=path,
+                            format='%(asctime)s: %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+        logger = logging.getLogger()
+        logger.setLevel(logging.DEBUG)
+        return logger

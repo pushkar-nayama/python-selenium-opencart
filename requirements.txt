@@ -1,0 +1,10 @@
+pytest-metadata
+pytest==9.0.1
+selenium
+openpyxl
+pytest-dependency
+pytest-html
+pytest-order
+pytest-xdist
+selenium
+allure-pytest
